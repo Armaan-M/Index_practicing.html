@@ -1,0 +1,493 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta id="viewport" content="width=device-width, height=device-height , initial-scale=1.0">
+  <div id="viewport">
+    <div id = "ball">
+      
+
+      </div>
+   
+
+
+    </div>
+  <title>Document</title>
+  <h1>
+  </h1>
+</head>
+</div>
+<style>
+  /* css */
+  #viewport{
+  width: 100%;
+    width: 5000px;
+overflow-y: hidden;
+overflow-x: hidden;
+background-color: aquamarine;
+font-size: 100px;
+height:500px;
+border: 10px solid black;
+left: auto;
+position:absolute;
+  }
+  #ball{background-image: url("soccorball.jpg");
+position: absolute;
+width: 100px;
+height: 100px;
+bottom: 300px;
+background-size: 100%;
+}
+
+#myBtn{
+  font-size: 50px;
+  position: absolute;
+bottom: 90px;
+color:green;
+background-color: orange;
+width: 200px ;
+height:100px ;
+left: 390px;
+}
+
+#myJumpBtn{
+  font-size: 50px;
+  position: absolute;
+bottom: 300px;
+color:green;
+background-color: orange;
+width: 200px ;
+height:100px ;
+left: 380px;
+}
+
+#myRightBtn{
+  font-size: 50px;
+  position: absolute;
+bottom: 200px;
+color:green;
+background-color: orange;
+width: 200px ;
+height:100px ;
+left: 600px;
+}
+
+#myLeftBtn{
+  font-size: 50px;
+  position: absolute;
+bottom: 200px;
+color:green;
+background-color: orange;
+width: 200px ;
+height:100px ;
+left: 170px;
+}
+#platform{
+  overflow-y: hidden;
+  overflow-x: hidden;
+  position:absolute;
+background-color: brown;
+height: 40px;
+width:400px;
+bottom: 515px;
+border: 5px solid black;
+top:auto; 
+left: 10px;
+}
+
+#platformer{
+  overflow-y: hidden;
+  overflow-x: hidden;
+  position:absolute;
+background-color: brown;
+height: 40px;
+width:300px;
+left: 550px;
+bottom: 515px;
+border: 5px solid black;
+
+
+}
+</style>
+
+
+<body>
+  <button id="myBtn" onclick="window.location.href = 'index_practicing.html';">
+    Reset
+  </button>
+  <button id="myJumpBtn">
+    jump
+  </button>
+  <button id="myRightBtn">
+    right
+  </button>
+  <button id="myLeftBtn">
+    left
+  </button>
+  <button id = "platform">
+
+    
+  </button>
+
+  <button id="platformer">
+h
+  </button>
+<script> // important
+
+let down = 6.25;
+var jump = 50;
+  var numbero = 300;
+var number200 = 300 + "px";
+
+
+if (positionRight > 500){
+  document.getElementById("ball").style.bottom = number200;
+}
+
+document.getElementById("myJumpBtn").addEventListener("click" , function(){
+document.getElementById("ball").style.bottom = numbero + jump + "px";// jump
+numbero = numbero + 50;
+function delay(time) {
+  return new Promise(resolve => setTimeout(resolve, time)); // time delay for jump
+}
+delay(100).then(() => {document.getElementById('ball').style.bottom = numbero - down + "px";//time delay for 50% animation
+numbero = numbero - 6.25;
+})
+
+delay(150).then(() => {document.getElementById('ball').style.bottom = numbero - down + "px";//time delay for 50% animation
+numbero = numbero - 6.25;
+})
+
+delay(200).then(() => {document.getElementById('ball').style.bottom = numbero - down + "px";//time delay for 100% animation
+numbero = numbero - 6.25;
+})
+
+delay(250).then(() => {document.getElementById('ball').style.bottom = numbero - down + "px";//time delay for 50% animation
+numbero = numbero - 6.25;
+})
+
+delay(300).then(() => {document.getElementById('ball').style.bottom = numbero - down + "px";//time delay for 100% animation
+numbero = numbero - 6.25;
+})
+
+delay(350).then(() => {document.getElementById('ball').style.bottom = numbero - down + "px";//time delay for 50% animation
+numbero = numbero - 6.25;
+})
+
+delay(400).then(() => {document.getElementById('ball').style.bottom = numbero - down + "px";//time delay for 100% animation
+numbero = numbero - 6.25;
+})
+
+delay(450).then(() => {document.getElementById('ball').style.bottom = numbero - down + "px";//time delay for 50% animation
+numbero = numbero - 6.25;
+})
+
+});
+
+
+//button - right
+var right = 50;
+  var positionRight = 10;
+document.getElementById("myRightBtn").addEventListener("click" , function(){
+  if (positionRight > 500){
+  document.getElementById("ball").style.bottom = number200;
+}
+
+    else if(positionRight >= 360 && positionRight < 410 ){
+
+      let down = 20.25;
+      function delay(time) {
+  return new Promise(resolve => setTimeout(resolve, time)); // time delay for jump
+}
+delay(100).then(() => {document.getElementById('ball').style.bottom = numbero - down + "px";//time delay for 50% animation
+numbero = numbero - 20.25;
+})
+
+delay(150).then(() => {document.getElementById('ball').style.bottom = numbero - down + "px";//time delay for 50% animation
+numbero = numbero - 20.25;
+})
+
+delay(200).then(() => {document.getElementById('ball').style.bottom = numbero - down + "px";//time delay for 100% animation
+numbero = numbero - 20.25;
+})
+
+delay(250).then(() => {document.getElementById('ball').style.bottom = numbero - down + "px";//time delay for 50% animation
+numbero = numbero - 20.25;
+})
+
+delay(300).then(() => {document.getElementById('ball').style.bottom = numbero - down + "px";//time delay for 100% animation
+numbero = numbero - 20.25;
+})
+
+delay(350).then(() => {document.getElementById('ball').style.bottom = numbero - down + "px";//time delay for 50% animation
+numbero = numbero - 20.25;
+})
+
+delay(400).then(() => {document.getElementById('ball').style.bottom = numbero - down + "px";//time delay for 100% animation
+numbero = numbero - 20.25;
+})
+
+delay(450).then(() => {document.getElementById('ball').style.bottom = numbero - down + "px";//time delay for 50% animation
+numbero = numbero - 20.25;
+})
+delay(500).then(() => {document.getElementById('ball').style.bottom = numbero - down + "px";//time delay for 100% animation
+numbero = numbero - 20.25;
+})
+
+delay(550).then(() => {document.getElementById('ball').style.bottom = numbero - down + "px";//time delay for 100% animation
+numbero = numbero - 20.25;
+})
+
+delay(600).then(() => {document.getElementById('ball').style.bottom = numbero - down + "px";//time delay for 100% animation
+numbero = numbero - 20.25;
+})
+
+delay(650).then(() => {document.getElementById('ball').style.bottom = numbero - down + "px";//time delay for 100% animation
+numbero = numbero - 20.25;
+})
+
+delay(700).then(() => {document.getElementById('ball').style.bottom = numbero - down + "px";//time delay for 100% animation
+numbero = numbero - 20.25;
+})
+
+delay(750).then(() => {document.getElementById('ball').style.bottom = numbero - down + "px";//time delay for 100% animation
+numbero = numbero - 20.25;
+})
+
+delay(800).then(() => {document.getElementById('ball').style.bottom = numbero - down + "px";//time delay for 100% animation
+numbero = numbero - 20.25;
+})
+
+delay(850).then(() => {document.getElementById('ball').style.bottom = numbero - down + "px";//time delay for 100% animation
+numbero = numbero - 20.25;
+})
+
+delay(900).then(() => {document.getElementById('ball').style.bottom = numbero - down + "px";//time delay for 100% animation
+numbero = numbero - 20.25;
+
+})
+
+delay(950).then(() => {document.getElementById('ball').style.bottom = numbero - down + "px";//time delay for 100% animation
+numbero = numbero - 20.25;
+
+
+
+
+
+if (positionRight > 470){
+  document.getElementById("ball").style.bottom = number200;
+}
+
+else {
+  delay(1000).then(() => {
+
+alert ("you lose: Press Reset To Play FAIR :)");
+  })
+}
+})
+
+
+    }
+document.getElementById("ball").style.left = positionRight + right + "px";
+positionRight = positionRight + 50;
+
+});
+// button - left
+var left = 50;
+  var positionRight = 10;
+document.getElementById("myLeftBtn").addEventListener("click" , function(){
+document.getElementById("ball").style.left = positionRight - left + "px";
+positionRight = positionRight - 50;
+});
+
+
+// positionRight > 360 then gravity is implemented 
+
+
+
+//keyboard controlls
+
+document.addEventListener('keydown' , (event) =>{
+
+  var name = event.key;
+  var code = event.code;
+ //left arrow
+  if (event.key === 'ArrowLeft') {
+  event.preventDefault();
+
+  
+
+
+
+    document.getElementById("ball").style.left = positionRight - left + "px";
+positionRight = positionRight - 50;
+
+  }
+//right arrow
+  else if(event.key === 'ArrowRight'){
+
+    event.preventDefault();
+
+    if (positionRight > 500){
+  document.getElementById("ball").style.bottom = number200;
+}
+
+    else if(positionRight >= 360 && positionRight < 410 ){
+
+      let down = 20.25;
+      var numberoo = 300 ;
+      function delay(time) {
+  return new Promise(resolve => setTimeout(resolve, time)); // time delay for jump
+}
+delay(100).then(() => {document.getElementById('ball').style.bottom = numberoo - down + "px";//time delay for 50% animation
+numberoo = numberoo - 20.25;
+})
+
+delay(150).then(() => {document.getElementById('ball').style.bottom = numberoo - down + "px";//time delay for 50% animation
+numberoo = numberoo - 20.25;
+})
+
+delay(200).then(() => {document.getElementById('ball').style.bottom = numberoo - down + "px";//time delay for 100% animation
+numberoo = numberoo - 20.25;
+})
+
+delay(250).then(() => {document.getElementById('ball').style.bottom = numberoo - down + "px";//time delay for 50% animation
+numberoo = numberoo - 20.25;
+})
+
+delay(300).then(() => {document.getElementById('ball').style.bottom = numberoo - down + "px";//time delay for 100% animation
+numberoo = numberoo - 20.25;
+})
+
+delay(350).then(() => {document.getElementById('ball').style.bottom = numberoo - down + "px";//time delay for 50% animation
+numberoo = numberoo - 20.25;
+})
+
+delay(400).then(() => {document.getElementById('ball').style.bottom = numberoo - down + "px";//time delay for 100% animation
+numberoo = numberoo - 20.25;
+})
+
+delay(450).then(() => {document.getElementById('ball').style.bottom = numberoo - down + "px";//time delay for 50% animation
+numbero = numbero - 20.25;
+})
+delay(500).then(() => {document.getElementById('ball').style.bottom = numberoo - down + "px";//time delay for 100% animation
+numberoo = numberoo - 20.25;
+})
+
+delay(550).then(() => {document.getElementById('ball').style.bottom = numberoo - down + "px";//time delay for 100% animation
+numberoo = numberoo - 20.25;
+})
+
+delay(600).then(() => {document.getElementById('ball').style.bottom = numberoo - down + "px";//time delay for 100% animation
+numberoo = numberoo - 20.25;
+})
+
+delay(650).then(() => {document.getElementById('ball').style.bottom = numberoo - down + "px";//time delay for 100% animation
+numberoo = numberoo - 20.25;
+})
+
+delay(700).then(() => {document.getElementById('ball').style.bottom = numberoo - down + "px";//time delay for 100% animation
+numberoo = numberoo - 20.25;
+})
+
+delay(750).then(() => {document.getElementById('ball').style.bottom = numberoo - down + "px";//time delay for 100% animation
+numberoo = numberoo - 20.25;
+})
+
+delay(800).then(() => {document.getElementById('ball').style.bottom = numberoo - down + "px";//time delay for 100% animation
+numberoo = numberoo - 20.25;
+})
+
+delay(850).then(() => {document.getElementById('ball').style.bottom = numberoo - down + "px";//time delay for 100% animation
+numberoo = numberoo - 20.25;
+})
+
+delay(900).then(() => {document.getElementById('ball').style.bottom = numberoo - down + "px";//time delay for 100% animation
+numberoo = numberoo - 20.25;
+
+})
+
+delay(950).then(() => {document.getElementById('ball').style.bottom = numberoo - down + "px";//time delay for 100% animation
+numberoo = numberoo - 20.25;
+
+
+
+
+
+if (positionRight > 470){
+  document.getElementById("ball").style.bottom = number200;
+}
+
+else {
+  delay(1000).then(() => {
+alert("You Lost");
+window.location.href = 'index_practicing.html';
+  })
+}
+
+})
+
+    }
+
+
+
+
+
+
+    document.getElementById("ball").style.left = positionRight + right + "px";
+positionRight = positionRight + 50;
+  }
+//bottom
+
+
+ // spacebar for jump function
+ 
+  else if(event.key === ' '){
+    
+    document.getElementById("ball").style.bottom = numbero + jump + "px";// jump
+numbero = numbero + 100;
+function delay(time) {
+  return new Promise(resolve => setTimeout(resolve, time)); // time delay for jump
+}
+delay(100).then(() => {document.getElementById('ball').style.bottom = numbero - down + "px";//time delay for 50% animation
+numbero = numbero - 12.5;
+})
+
+delay(150).then(() => {document.getElementById('ball').style.bottom = numbero - down + "px";//time delay for 50% animation
+numbero = numbero - 12.5;
+})
+
+delay(200).then(() => {document.getElementById('ball').style.bottom = numbero - down + "px";//time delay for 100% animation
+numbero = numbero - 12.5;
+})
+
+delay(250).then(() => {document.getElementById('ball').style.bottom = numbero - down + "px";//time delay for 50% animation
+numbero = numbero - 12.5;
+})
+
+delay(300).then(() => {document.getElementById('ball').style.bottom = numbero - down + "px";//time delay for 100% animation
+numbero = numbero - 12.5;
+})
+
+delay(350).then(() => {document.getElementById('ball').style.bottom = numbero - down + "px";//time delay for 50% animation
+numbero = numbero - 12.5;
+})
+
+delay(400).then(() => {document.getElementById('ball').style.bottom = numbero - down + "px";//time delay for 100% animation
+numbero = numbero - 12.5;
+})
+
+delay(450).then(() => {document.getElementById('ball').style.bottom = numbero - down + "px";//time delay for 50% animation
+numbero = numbero - 12.5;
+})
+  }
+
+
+}, false);
+
+
+
+</script> 
+</body>
+</html>
